@@ -1,0 +1,2069 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/yangshi.css">
+	<link rel="stylesheet" href="css/center-css.css" />
+	<link rel="stylesheet" href="css/taobaobottom.css" />
+
+	<script src="js/jquery.js"></script>
+	<script src="js/myjS.js"></script>
+	<script src="js/huafei.js"></script>
+	<script type="text/javascript">
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	// 调用封装的函数
+	// function myajax(request,cb){
+	// 	$.ajax({
+	// 		url: request,
+	// 		type: 'GET',
+	// 		dataType: 'json',
+	// 	})
+	// 	.done(function(data) {
+	// 		cb(data);
+	// 	})
+	// }
+	// 	var HOST="data/";
+	// 	myajax(HOST+"ali-app.txt",function(json){
+	// 		var address=json.result["1164532"].result[0];
+	// 		var $span=$("<span></span>");
+	// 		$span.addClass('top_center_app_span1');
+	// 		$span.html(address.name);
+			
+	// 		var $a=$("<a href=''>更多▶</a>")
+	// 		$a.addClass('top_center_app_span2');
+	// 		$a.attr("href",address.more);
+
+	// 		$("#top_center_app").prepend($a);
+	// 		$("#top_center_app").prepend($span);
+
+	// 		var address2=json.result["1164533"].result;
+	// 		$.each(address2,function(index,value){
+	// 			var $li=$("<li></li>");
+	// 			var $img=$("<img/>");
+	// 			$img.addClass('top_center_app_img');
+	// 			$img.attr("src",value.img);
+	// 			$li.append($img);
+	// 			$("#top_center_app_ul").append($li);
+	// 		})
+	// 	})	
+
+	// 	//隐藏栏的
+	// 	myajax(HOST+"theme-market.txt",function(json){
+	// 		var adddress1=json[222887];
+	// 		var adddress2=json[222890];
+	// 		var adddress3=json[222889];
+	// 		var arr=[adddress1,adddress2,adddress3];
+	// 		$.each(arr,function(index,neirong){
+	// 			var $span=$("<span></span>");
+	// 			$span.addClass('top_center_box1_left_span');
+
+	// 			var $div=$("<div></div>");
+	// 			$div.addClass('top_center_box1_left_span_div');
+
+	// 			var $img=$("<img src='' alt='' />");
+	// 			$img.addClass('top_center_box1_left_span_div_img');
+	// 			$img.attr("src",neirong.value.head[0].logo);
+	// 			$div.append($img);
+
+	// 			var $a=$("<a href=''>更多▶</a>");
+	// 			$a.attr("href",neirong.value.head[0].more);
+	// 			$a.addClass('top_center_box1_left_span_div2');
+
+	// 			var $span1=$("<span></span>");
+	// 			$span1.addClass('top_center_box1_left_span_div_span');
+	// 			$span1.html(neirong.value.head[0].name);
+	// 			$div.append($span1);
+
+	// 			$span.append($a);
+	// 			$span.append($div);
+	// 			$("#top_center_box1_left").append($span);
+	// 		})
+	// 		//每日好货
+		// 	myajax(HOST+"hasgoods.txt",function(json){
+			
+		// 	var arry=json.result["1164535"].result;
+		// 	// console.log(arry);
+		// 	$.each(arry,function(index, value) {
+		// 		var $li=$("<li></li>");
+		// 		$li.addClass('center-goods-li');
+		// 		var imgUrl="http:"+value.pic;
+		// 		$img=$("<img src="+imgUrl+" alt=''/>")
+		// 		$img.addClass('center-goods-li-img');
+		// 		// var $title=value.title;
+		// 		var $span=$("<span></span>");
+		// 		$span.html(value.title);
+		// 		$span.addClass('center-goods-li-span');
+		// 		// var $content=value.content;
+				
+		// 		$p=$("<p></p>");
+		// 		$p.html(value.content);
+		// 		$p.addClass('center-goods-li-p');
+		// 		$i=$("<i></i>");
+		// 		var $zanTotal=$("<i class='center-goods-li-i'>"+value.zanTotal+"人说好+" +"</i>");
+		// 		$li.append($img);
+		// 		$li.append($span);
+		// 		$li.append($p);
+		// 		$li.append($zanTotal);
+		// 		$(".center-goods-ul").append($li);
+
+		// 	});
+		// })
+
+
+		// 每日好店
+		// myajax(HOST+"everyday-shop.txt",function(json){
+		// 	var result=json.result[1164537].result;
+		// 	// console.log(result);
+		// 	$.each(result, function(index, value) {
+		// 		$li=$("<li></li>");
+		// 		$li.addClass('center-r-content');
+		// 		$span=$("<span></span>");
+		// 		$span.addClass('center-r-content-text-span');
+		// 		$span.append(value.categoryName);
+		// 		// console.log(value.categoryName);
+		// 		$i=$("<i></i>");
+		// 		$i.addClass('center-r-content-text-i');
+		// 		$i.html("暂无店铺评价");
+		// 		$div1=$("<div1></div1>");
+		// 		$div1.addClass('center-r-img-left fl');
+		// 		var imgUrl1="http:"+value.pic1;
+		// 		$img1=$("<img src="+imgUrl1+" alt=''/>")
+		// 		$img1.addClass('center-r-content-img-89');
+		// 		var imgUrl2="http:"+value.pic2;
+		// 		$img2=$("<img src="+imgUrl2+" alt=''/>")
+		// 		$img2.addClass('center-r-content-img-89');
+		// 		$div1.append($img1).append($img2);
+
+		// 		$div2=$("<div2></div2>");
+		// 		$div2.addClass('center-r-img-rihgt fl');
+		// 		var imgUrl3="http:"+value.picThumb;
+		// 		$img3=$("<img src="+imgUrl3+" alt=''/>")
+		// 		$img3.addClass('center-r-content-img-180');
+		// 		$div2.append($img3);
+		// 		$li.append($span).append($i).append($div1).append($div2)
+		// 		$(".center-right-box-ul").append($li);
+				
+		// 	});		
+		// })
+
+
+
+	// 		//每日好货
+	// 		myajax(HOST+"everyday-shop.txt",function(json){
+	// 			var arr=json.result["1164537"].result;
+	// 			$.each(arr,function(index,value){
+	// 				$li=$("<li></li>");
+	// 				$li.addClass('center-r-content');
+
+	// 				$span=$("<span></span>");
+	// 				$span.addClass('center-r-content-text-span');
+	// 				$span.html(value.categoryName);
+
+	// 				$i=$("<i>暂无店铺评价</i>");
+	// 				$i.addClass('center-r-content-text-i');
+
+					
+	// 				$div=$("<div></div>");
+	// 				$div.addClass('center-r-img-left fl');
+
+	// 				$img=$("<img src='' alt='' />");
+	// 				$img.addClass('center-r-content-img-89');
+	// 				$img.attr("src",value.pic1);
+
+	// 				$img1=$("<img src='' alt='' />");
+	// 				$img1.addClass('center-r-content-img-89');
+	// 				$img1.attr("src",value.pic2);
+
+	// 				$div2=$("<div></div>");
+	// 				$div2.addClass('center-r-img-rihgt fl');
+					
+	// 				$img2=$("<img src='' alt='' />")
+	// 				$img2.addClass('center-r-content-img-180');
+	// 				$img2.attr("src",value.picThumb);
+
+	// 				$div2.append($img2);
+	// 				$div.append($img);
+	// 				$div.append($img1);
+	// 				$li.append($span);
+	// 				$li.append($i);
+	// 				$li.append($div);
+	// 				$li.append($div2);
+	// 				$(".center-right-box-ul").append($li);
+
+	// 			})
+	// 		})
+	// 	})	
+
+			$(function(){
+		//鼠标进入,显示区域列表
+		$(".top_title_select1").hover(function(){
+			$("#area_list").show();
+			$(this).css("background-color","#fff");
+		})
+		//鼠标离开区域列表,隐藏区域列表
+		$("#area_list").on("mouseleave",function(){
+			$(this).hide();
+			$(".top_title_select1").css("background-color","#F1F1F1");
+		})
+		//点击区域替换选择元素的内容
+		$("#area_list li").on("click",function(){
+			var text = $(this).text();
+			$(".top_title_select1").html(text);
+		})
+
+
+		$(".titile_right_li").eq(0).hover(function() {
+			$("#area_list2").show();
+			$(this).css("background-color","#fff");
+		})
+
+		$("#area_list2").on("mouseleave",function(){
+			$(this).hide();
+			$(".titile_right_li").css("background-color","#F1F1F1");
+		})
+
+
+
+		$(".titile_right_li").eq(2).hover(function() {
+			$("#area_list3").show();
+			$(this).css("background-color","#fff");
+		})
+
+		$("#area_list3").on("mouseleave",function(){
+			$(this).hide();
+			$(".titile_right_li").css("background-color","#F1F1F1");
+		})
+
+
+		$(".titile_right_li").eq(4).hover(function() {
+			$("#area_list4").show();
+			$(this).css("background-color","#fff");
+		})
+
+		$("#area_list4").on("mouseleave",function(){
+			$(this).hide();
+			$(".titile_right_li").css("background-color","#F1F1F1");
+		})
+
+
+		$(".titile_right_li").eq(5).hover(function() {
+			$("#area_list5").show();
+			$(this).css("background-color","#fff");
+		})
+
+		$("#area_list5").on("mouseleave",function(){
+			$(this).hide();
+			$(".titile_right_li").css("background-color","#F1F1F1");
+		})
+
+		
+		// 网站导航
+		$(".titile_right_li").eq(6).hover(function() {
+			$("#navigation").show();
+			$(this).css({
+				"background-color": "#fff",
+				"color": '#f40'
+			});
+			$("#navigation").on("mouseleave",function(){
+			$(this).hide();
+			$(".titile_right_li").eq(6).css("background-color","#F1F1F1");
+		})
+		})
+
+	})
+	</script>
+</head>
+<body>
+	<div id="top">
+		<div id="top_title">
+			<ul id="top_title_left">
+				<li class="titile_left_li top_title_select1">中国大陆</li>
+				<li class="titile_left_li" id="enter">亲,请登录</li>
+				<li class="titile_left_li" id="login">免费注册</li>
+				<li class="titile_left_li">手机逛淘宝</li>
+			</ul>
+			<ul id="area_list">
+					<li>全球</li>
+					<li>中国大陆</li>
+					<li>香港</li>
+					<li>台湾</li>
+					<li>澳门</li>
+					<li>韩国</li>
+					<li>马来西亚</li>
+					<li>澳大利亚</li>
+					<li>新加坡</li>
+					<li>新西兰</li>
+					<li>加拿大</li>
+					<li>美国</li>
+					<li>日本</li>
+				</ul>
+
+				<ul id="area_list2">
+					<li>已买到的宝贝</li>
+					<li>我的足迹</li>
+				</ul>
+
+				<ul id="area_list3">
+					<li>收藏的宝贝</li>
+					<li>收藏的店铺</li>
+				</ul>
+
+				<ul id="area_list4">
+					<li>已卖出的宝贝</li>
+					<li>出售中的宝贝</li>
+					<li>卖家服务市场</li>
+					<li>卖家培训中心</li>
+					<li>体验中心</li>
+					<li>问商友</li>
+				</ul>
+		
+				<ul id="area_list5">
+					<li>消费者客服</li>
+					<li>卖家客服</li>
+				</ul>
+			<ul id="top_title_right">
+				<li  class="titile_right_li">
+						我的淘宝
+					<!-- <select class="top_title_select">
+						<option value="">我的淘宝</option>
+						<option value="">已买到的宝贝</option>
+						<option value="">我的足迹</option>
+					</select> -->
+					
+				</li>
+							
+				<li  class="titile_right_li">购物车<b class="title_right_li_b">0</b></li>
+				<li  class="titile_right_li">收藏夹
+				</li>
+				<li  class="titile_right_li" id="title_right_li_case">商品分类</li>
+				<li  class="titile_right_li">卖家中心
+				<!-- 	<select class="top_title_select">
+						<option value="">卖家中心</option>
+						<option value="">免费开店</option>
+						<option value="">已卖出的宝贝</option>
+						<option value="">出售中的宝贝</option>
+						<option value="">卖家服务市场</option>
+						<option value="">卖家培训中心</option>
+						<option value="">体验中心</option>
+						<option value="">问商友</option>
+					</select> -->
+				</li>
+				<li  class="titile_right_li">联系客服
+					<!-- <select class="top_title_select">
+						<option value="">联系客服</option>
+						<option value="">消费者客服</option>
+						<option value="">卖家客服</option>
+					</select> -->
+				</li>
+				<li  class="titile_right_li">网站导航</li>
+			</ul>
+		</div>
+			<div id="navigation">
+			<div class="navigation-div">
+				<h3 class="navigation-div-h1">主题市场</h3>
+				<ul class="navigation-div-ul">
+					<li class="navigation-div-ul-li">女装</li>
+					<li class="navigation-div-ul-li">男装</li>
+					<li class="navigation-div-ul-li">内衣</li>
+					<li class="navigation-div-ul-li">鞋靴</li>
+					<li class="navigation-div-ul-li">箱包</li>
+					<li class="navigation-div-ul-li">婴童</li>
+					<li class="navigation-div-ul-li">家电</li>
+					<li class="navigation-div-ul-li">数码</li>
+					<li class="navigation-div-ul-li">手机</li>
+					<li class="navigation-div-ul-li">美妆</li>
+					<li class="navigation-div-ul-li">珠宝</li>
+					<li class="navigation-div-ul-li">眼镜</li>
+					<li class="navigation-div-ul-li">手表</li>
+					<li class="navigation-div-ul-li">运动</li>
+					<li class="navigation-div-ul-li">户外</li>
+					<li class="navigation-div-ul-li">乐器</li>
+					<li class="navigation-div-ul-li">游戏</li>
+					<li class="navigation-div-ul-li">动漫</li>
+					<li class="navigation-div-ul-li">影视</li>
+					<li class="navigation-div-ul-li">美食</li>
+					<li class="navigation-div-ul-li">鲜花</li>
+					<li class="navigation-div-ul-li">宠物</li>
+					<li class="navigation-div-ul-li">农资</li>
+					<li class="navigation-div-ul-li">房产</li>
+					<li class="navigation-div-ul-li">装修</li>
+					<li class="navigation-div-ul-li">建材</li>
+					<li class="navigation-div-ul-li">家居</li>
+					<li class="navigation-div-ul-li">百货</li>
+					<li class="navigation-div-ul-li">汽车</li>
+					<li class="navigation-div-ul-li">二手车</li>
+					<li class="navigation-div-ul-li">办公</li>
+					<li class="navigation-div-ul-li">企业购</li>
+					<li class="navigation-div-ul-li">定制</li>
+					<li class="navigation-div-ul-li">教育</li>
+					<li class="navigation-div-ul-li">卡券</li>
+					<li class="navigation-div-ul-li">本地</li>
+				</ul>
+			</div>
+			<div class="navigation-div">
+				<h3 class="navigation-div-h1">特色市场</h3>
+				<ul class="navigation-div-ul">
+					<li class="navigation-div-ul-li2">iFashion</li>
+					<li class="navigation-div-ul-li2">爱逛街</li>
+					<li class="navigation-div-ul-li2">美妆秀</li>
+					<li class="navigation-div-ul-li2">全球购</li>
+					<li class="navigation-div-ul-li2">腔调</li>
+					<li class="navigation-div-ul-li2">淘女郎</li>
+					<li class="navigation-div-ul-li2">星店</li>
+					<li class="navigation-div-ul-li2">极有家</li>
+					<li class="navigation-div-ul-li2">特色中国</li>
+					<li class="navigation-div-ul-li2">拍卖会</li>
+					<li class="navigation-div-ul-li2">淘宝众筹</li>
+					<li class="navigation-div-ul-li2">中国制造</li>
+					<li class="navigation-div-ul-li2">飞猪</li>
+					<li class="navigation-div-ul-li2">亲宝贝</li>
+					<li class="navigation-div-ul-li2">闲鱼</li>
+					<li class="navigation-div-ul-li2">农资</li>
+					<li class="navigation-div-ul-li2">天天特价</li>
+					<li class="navigation-div-ul-li2">Outlets</li>
+					<li class="navigation-div-ul-li2">佳人购</li>
+					<li class="navigation-div-ul-li2">聚名品</li>
+					<li class="navigation-div-ul-li2">淘抢购</li>
+					<li class="navigation-div-ul-li2">全球精选</li>
+					<li class="navigation-div-ul-li2">非常大牌</li>
+					<li class="navigation-div-ul-li2">试用</li>
+					<li class="navigation-div-ul-li2">量购团</li>
+					<li class="navigation-div-ul-li2">阿里翻译</li>
+				</ul>
+			</div>
+			<div class="navigation-div">
+				<h3 class="navigation-div-h1">阿里APP</h3>
+				<ul class="navigation-div-ul">
+					<li class="navigation-div-ul-li2">淘宝</li>
+					<li class="navigation-div-ul-li2">天猫</li>
+					<li class="navigation-div-ul-li2">支付宝</li>
+					<li class="navigation-div-ul-li2">聚划算</li>
+					<li class="navigation-div-ul-li2">飞猪</li>
+					<li class="navigation-div-ul-li2">蚂蚁聚宝</li>
+					<li class="navigation-div-ul-li2">旺信</li>
+					<li class="navigation-div-ul-li2">闲鱼</li>
+					<li class="navigation-div-ul-li2">阿里钱盾</li>
+					<li class="navigation-div-ul-li2">丁丁</li>
+					<li class="navigation-div-ul-li2">高德地图</li>
+					<li class="navigation-div-ul-li2">点点虫</li>
+					<li class="navigation-div-ul-li2">虾米音乐</li>
+					<li class="navigation-div-ul-li2">淘票票</li>
+					<li class="navigation-div-ul-li2">菜鸟裹裹</li>
+					<li class="navigation-div-ul-li2">爱逛街</li>
+					<li class="navigation-div-ul-li2">拍卖会</li>
+					<li class="navigation-div-ul-li2">阿里云</li>
+					<li class="navigation-div-ul-li2">网商银行</li>
+					<li class="navigation-div-ul-li2">阿里邮箱</li>
+					<li class="navigation-div-ul-li2">阿里众包</li>
+				</ul>
+			</div>
+			<div class="navigation-div">
+				<h3 class="navigation-div-h1">精彩推荐集</h3>
+				<ul class="navigation-div-ul">
+					<li class="navigation-div-ul-li3">余额宝</li>
+					<li class="navigation-div-ul-li3">大牌拾宝</li>
+					<li class="navigation-div-ul-li3">淘公仔</li>
+					<li class="navigation-div-ul-li3">浏览器</li>
+					<li class="navigation-div-ul-li3">淘宝香港</li>
+					<li class="navigation-div-ul-li3">淘宝台湾</li>
+					<li class="navigation-div-ul-li3">淘宝全球</li>
+					<li class="navigation-div-ul-li3">淘宝东南亚</li>
+					<li class="navigation-div-ul-li3">闺蜜淘宝</li>
+					<li class="navigation-div-ul-li3">大众评审</li>
+					<li class="navigation-div-ul-li3">淘工作</li>
+					
+				</ul>
+			</div>
+		</div>	
+		<div id="top1_select">
+			<div id="top1_left">
+				<h1 id="top1_left_h1">淘宝网</h1>
+			</div>
+			<div id="top1_center">
+				<div id="top1_center_select">
+					<ul id="top1_center_select_ul">
+						<li class="top1-center-select-li1">宝贝</li>
+						<li class="top1-center-select-li">天猫</li>
+						<li class="top1-center-select-li">店铺</li>
+					</ul>
+					<span id="top1_center_select_span">
+						<input type="text" id="top1_center_select_input" value="oppoa77手机壳女"/>
+					</span>
+					<a href=""><input type="text" id="top1_center_select_button" value="搜索"/></a>
+					<div id="top1_center_select_bottom">
+						<a href="" class="top1-center_selcet_bottom_a">新款连衣裙</a>
+						<a href="" class="top1-center_selcet_bottom_a">四件套</a>
+						<a href="" class="top1-center_selcet_bottom_a" id="top1-center_selcet_bottom_a_choose">潮流T恤</a>
+						<a href="" class="top1-center_selcet_bottom_a">时尚女鞋</a>
+						<a href="" class="top1-center_selcet_bottom_a">短裤</a>
+						<a href="" class="top1-center_selcet_bottom_a">半身裙</a>
+						<a href="" class="top1-center_selcet_bottom_a">男士外套</a>
+						<a href="" class="top1-center_selcet_bottom_a">墙纸</a>
+						<a href="" class="top1-center_selcet_bottom_a">行车记录仪</a>
+						<a href="" class="top1-center_selcet_bottom_a">新款男鞋</a>
+						<a href="" class="top1-center_selcet_bottom_a">耳机</a>
+						<a id="top1-center_selcet_bottom_a2">更多▶</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="top_float_box">
+			<div id="top_float">
+				<p id="top_float_p">手机淘宝</p>
+				<img src="images/erwei.webp" alt="" id="top_float_img"/>
+			</div>
+			<!-- <div id="top_close">x</div> -->
+		</div>
+		<div id="top_tbn">
+			<ul id="top_tbn_ul1">
+				<li class="top_tbn_ul1_li">天猫</li>
+				<li class="top_tbn_ul1_li">聚划算</li>
+				<li class="top_tbn_ul1_li">天猫超市</li>
+			</ul>
+			<ul id="top_tbn_ul2">
+				<li class="top_tbn_ul2_li">淘抢购</li>
+				<li class="top_tbn_ul2_li">电器城</li>
+				<li class="top_tbn_ul2_li">司法拍卖</li>
+				<li class="top_tbn_ul2_li">中国制造</li>
+				<li class="top_tbn_ul2_li">特色中国</li>
+			</ul>
+			<ul id="top_tbn_ul3">
+				<li class="top_tbn_ul3_li">飞猪旅行</li>
+				<li class="top_tbn_ul3_li">智能生活</li>
+				<li class="top_tbn_ul3_li">苏宁易购</li>
+			</ul>
+		</div>
+		<div id="top_center">
+			<div id="top_center_box1">
+				<div id="top_center_box1_left">
+					<div class="top_center_box1_left_box">
+						<span class="top_center_box1_left_span">
+							<div class="top_center_box1_left_span_div">
+								<img src="" alt="" class="top_center_box1_left_span_div_img"/>
+								<span class="top_center_box1_left_span_div_span"></span>
+							</div>
+							<a href=""  class="top_center_box1_left_span_div2"></a>
+						</span>
+					<ul class="top_center_box1_left_ul">
+					<!-- 	<li class="top_center_box1_left_ul_li"></li> -->
+					</ul>
+					</div>
+					<div id="top_center_box1_left_box">
+						<span class="top_center_box1_left_span">
+							<div class="top_center_box1_left_span_div">
+								<img src="" alt="" class="top_center_box1_left_span_div_img"/>
+								<span class="top_center_box1_left_span_div_span"></span>
+							</div>
+							<a href=""  class="top_center_box1_left_span_div2"></a>
+						</span>
+					<ul class="top_center_box1_left_ul">
+					<!-- 	<li class="top_center_box1_left_ul_li"></li> -->
+					</ul>
+					</div>
+					<div id="top_center_box1_left_box">
+						<span class="top_center_box1_left_span">
+							<div class="top_center_box1_left_span_div">
+								<img src="" alt="" class="top_center_box1_left_span_div_img"/>
+								<span class="top_center_box1_left_span_div_span"></span>
+							</div>
+							<a href=""  class="top_center_box1_left_span_div2"></a>
+						</span>
+					<ul class="top_center_box1_left_ul">
+						<!-- <li class="top_center_box1_left_ul_li"></li> -->
+					</ul>
+					</div>
+				</div>
+				<div id="top_center_box1_right">
+					<span id="top_center_box1_right_span1">猜你喜欢</span>
+					<span id="top_center_box1_right_span2">实时推荐最适合你的宝贝</span>
+					<ul id="top_center_box1_right_ul">
+						<li class="top_center_box1_right_ul_li"><img src="" alt="" class="top_center_box1_right_ul_li_img" /><span class="top_center_box1_right_ul_li_span"></span></li>
+					</ul>
+				</div>
+			</div>
+			<div id="top_center_theme">
+				<h3 id="top_center_theme_h3">主题市场</h3>
+			</div>
+			<div id="top_center_select">
+				<ul>
+					<li class="top_center_select_li">
+						<span>
+							<a href="" data-dataid="222887">女装/</a>
+							<a href=""data-dataid="222890">男装/</a>
+							<a href=""data-dataid="222889">内衣 ➤</a>
+						</span>
+					 </li>
+					<li class="top_center_select_li">
+						<span>
+							<a href=""data-dataid="222886">鞋靴/</a>
+							<a href=""data-dataid="222906">箱包/</a>
+							<a href=""data-dataid="222898">配件 ➤</a>
+						</span>
+					</li>
+					<li class="top_center_select_li">
+						<span>
+							<a href=""data-dataid="222907">童装玩具/</a>
+							<a href=""data-dataid="222885">孕产/</a>
+							<a href=""data-dataid="222895">用品 ➤</a>
+						</span> 
+					</li>
+					<li class="top_center_select_li">
+						<span>
+							<a href="" data-dataid="222878">家电/</a>
+							<a href="" data-dataid="222908">数码/</a>
+							<a href="" data-dataid="222879">手机 ➤</a>
+						</span>
+						</li> 
+					<li class="top_center_select_li">
+						<span>
+							<a href=""data-dataid="222893">美妆/</a>
+							<a href=""data-dataid="222896">洗护/</a>
+							<a href=""data-dataid="222918">保健品 ➤</a>
+						</span> 
+						</li>
+					<li class="top_center_select_li">
+						<span>
+							<a href=""data-dataid="222917">珠宝/</a>
+							<a href="" data-dataid="222888">眼镜/</a>
+							<a href="" data-dataid="222902">手表 ➤</a>
+						</span>
+						</li>
+					<li class="top_center_select_li">
+						<span>
+							<a href=""data-dataid="222880">运动/</a>
+							<a href=""  data-dataid="222913">户外/</a>
+							<a href=""data-dataid="222910">乐器 ➤</a>
+						</span>
+						  </li>
+					<li class="top_center_select_li">
+						<span>
+							<a href=""data-dataid="222882">游戏/</a>
+							<a href=""data-dataid="222883">动漫/</a>
+							<a href="" data-dataid="222921">影视 ➤</a>
+						</span>
+						  </li>
+					<li class="top_center_select_li">
+						<span>
+							<a href="" data-dataid="222899">美食/</a>
+							<a href=""data-dataid="222905">生鲜/</a>
+							<a href=""data-dataid="222881">零食 ➤</a>
+						</span>
+						  </li>
+					<li class="top_center_select_li">
+						<span>
+							<a href=""data-dataid="222911">鲜花/</a>
+							<a href=""data-dataid="222894">宠物/</a>
+							<a href=""data-dataid="222920">农资 ➤</a>
+						</span>
+						  </li>
+					<li class="top_center_select_li">
+						<span>
+							<a href=""data-dataid="222914">房产/</a>
+							<a href="" data-dataid="222877">装修/</a>
+							<a href=""data-dataid="222919">建材 ➤</a>
+						</span>
+						  </li>
+					<li class="top_center_select_li">
+						<span>
+							<a href="" data-dataid="222915">家具/</a>
+							<a href=""data-dataid="222922">家饰/</a>
+							<a href=""data-dataid="222884">家纺 ➤</a>
+						</span>
+						  </li>
+					<li class="top_center_select_li">
+						<span>
+							<a href="" data-dataid="222912">汽车/</a>
+							<a href=""data-dataid="222892">二手车 /</a>
+							<a href=""data-dataid="222900">用品 ➤</a>
+						</span>
+						  </li>
+					<li class="top_center_select_li">
+						<span>
+							<a href="" data-dataid="222923">办公/</a>
+							<a href="" data-dataid="222909">DIY/</a>
+							<a href="" data-dataid="222897">五金电子 ➤</a>
+						</span>
+						  </li>
+					<li class="top_center_select_li">
+						 <span>
+							<a href="" data-dataid="222891">百货/</a>
+							<a href="" data-dataid="222903">餐厨 /</a>
+							<a href=""  data-dataid="222901">家庭保健 ➤</a>
+						</span>
+						  </li>
+					<li class="top_center_select_li">
+							 <span>
+							<a href="" data-dataid="222904">学习/</a>
+							<a href=""data-dataid="222916">卡券/</a>
+							<a href=""data-dataid="222924">本地服务 ➤</a>
+						</span>
+						  </li>
+				</ul>
+			</div>
+			<img src="images/down.webp" alt="" id="top_center_select_down"/>
+			<div id="top_center_promo">
+				<ul id="top_center_promo_ul1">
+					<li class="top_center_promo_ul1_li" style="left:0"><img src="images/banner1.webp.jpg" alt="" class="top_center_promo_ul1_li_img"/></li>
+					<li class="top_center_promo_ul1_li"><img src="images/banner2.jpg" alt="" class="top_center_promo_ul1_li_img"/></li>
+					<li class="top_center_promo_ul1_li"><img src="images/banner3.jpg" alt=""class="top_center_promo_ul1_li_img" /></li>
+					<li class="top_center_promo_ul1_li"><img src="images/banner4.jpg" alt="" class="top_center_promo_ul1_li_img"/></li>
+					<li class="top_center_promo_ul1_li"><img src="images/banner5.webp.jpg" alt="" class="top_center_promo_ul1_li_img"/></li>
+
+				</ul>
+				<ul id="top_center_promo_ul2">
+					<li class="top_center_promo_ul2_li choose"></li>
+					<li class="top_center_promo_ul2_li"></li>
+					<li class="top_center_promo_ul2_li"></li>
+					<li class="top_center_promo_ul2_li"></li>
+					<li class="top_center_promo_ul2_li"></li>
+				</ul>
+				<input type="button" id="top_center_promo_btn1" value="<"/>
+				<input type="button" id="top_center_promo_btn2" value=">"/>
+			</div>
+			<div id="top_center_wall">
+				<h2 id="top_center_wall_h2">天猫必逛</h2>
+				<span id="top_center_wall_span">热卖品牌,天天上天猫</span>
+				<div id="top_center_wall_div">1/6</div>
+			</div>
+			<!-- 第二块轮播图 -->
+			<div id="top_center_promo2">
+				<div id="top_center_promo2_div">
+					<ul class="top_center_promo2_div2">
+						
+					</ul>
+					<!-- <a href="" class="top_center_promo2_div_left"><img src="images/TB2stkIbXXXXXcgXpXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg_.webp" alt="" /></a> -->
+					<!-- <div id="top_center_promo2_div_box">
+						<a href="" class="top_center_promo2_div_right"><img src="images/TB2Qy3Jc8yN.eBjSZFgXXXmGXXa_!!40-0-yamato.jpg_350x1000q90.jpg_.webp" alt=""  /></a>
+						<a href="" class="top_center_promo2_div_right"><img src="images/TB2OL7PgSBjpuFjy1XdXXaooVXa_!!77-0-yamato.jpg_350x1000q90.jpg_.webp" alt="" /></a>
+						<a href="" class="top_center_promo2_div_right"><img src="images/TB2HQHhsXXXXXa9XpXXXXXXXXXX_!!5-0-yamato.jpg_350x1000q90.jpg_.webp" alt="" /></a>
+						<a href="" class="top_center_promo2_div_right"><img src="images/TB2xH8RXmuJ.eBjy0FgXXXBBXXa_!!133-0-yamato.jpg_350x1000q90.jpg_.webp" alt="" /></a>
+					</div> -->
+					<!-- 小圆圈 -->
+					<ul id="top_center_promo2_ul">
+						<li class="top_center_promo2_ul_li choose2"></li>
+						<li class="top_center_promo2_ul_li"></li>
+						<li class="top_center_promo2_ul_li"></li>
+						<li class="top_center_promo2_ul_li"></li>
+						<li class="top_center_promo2_ul_li"></li>
+						<li class="top_center_promo2_ul_li"></li>
+					</ul>
+					<input type="button" id="top_center_promo2_btn1" value="<"/>
+					<input type="button" id="top_center_promo2_btn2" value=">"/>
+				</div>
+			</div>
+			<div id="top_center_transition">
+				<a href="" class="top_center_transition_a">
+					<img src="images/TB2d2_ggFXXXXaNXXXXXXXXXXXX_!!5-2-subaru.png_120x120q90.jpg_.webp" alt="" class="top_center_transition_a_img"/>
+					<p class="top_center_transition_a_p1">商品一</p>
+					<p class="top_center_transition_a_p2">商品介绍</p>
+					<p class="top_center_transition_a_p3">♥人气n</p>
+				</a>
+				<a href="" class="top_center_transition_a">
+					<img src="images/TB2g2JxrCFmpuFjSZFrXXayOXXa_!!2889741150.jpg_120x120q90.jpg_.webp" alt="" class="top_center_transition_a_img"/>
+					<p class="top_center_transition_a_p1">商品二</p>
+					<p class="top_center_transition_a_p2">商品介绍</p>
+					<p class="top_center_transition_a_p3">♥人气n</p>
+				</a>
+				<a href="" class="top_center_transition_a">
+					<img src="images/TB2zklvnFXXXXbiXpXXXXXXXXXX_!!2177217597-0-tmall_act_content.jpg_120x120q90.jpg_.webp" alt="" class="top_center_transition_a_img"/>
+					<p class="top_center_transition_a_p1">商品三</p>
+					<p class="top_center_transition_a_p2">商品介绍</p>
+					<p class="top_center_transition_a_p3">♥人气n</p>
+				</a>
+				<a href="" class="top_center_transition_a">
+					<img src="images/TB11NoYNVXXXXX1XVXXSutbFXXX.jpg_120x120q90.jpg_.webp" alt="" class="top_center_transition_a_img"/>
+					<p class="top_center_transition_a_p1">商品四</p>
+					<p class="top_center_transition_a_p2">商品介绍</p>
+					<p class="top_center_transition_a_p3">♥人气n</p>
+				</a>
+				<a href="" class="top_center_transition_a">
+					<img src="images/TB26yOLfwNlpuFjy0FfXXX3CpXa_!!0-juitemmedia.jpg_120x120q90.jpg_.webp" alt="" class="top_center_transition_a_img"/>
+					<p class="top_center_transition_a_p1">商品五</p>
+					<p class="top_center_transition_a_p2">商品介绍</p>
+					<p class="top_center_transition_a_p3">♥人气n</p>
+				</a>
+			</div>
+			<div id="top_center_sub">
+				<div id="top_center_sub_box1"></div>
+				<h5 id="top_center_sub_h5">今日热卖</h5>
+				<div id="top_center_sub_box2"></div>
+			</div>
+			<div id="top_center_member">
+				<div id="top_center_member_div">
+					<img src="images/touxiang.jpg" alt="" id="top_center_member_div_img" />
+					<span id="top_center_member_div_span">Hi 您好</span>
+					<p id="top_center_member_div_p"><a href="" class="top_center_member_div_p_a">领金币抵钱</a><span>或去</span><a href="" class="top_center_member_div_p_a">会员俱乐部</a></p>
+				</div>
+				<input type="button" id="top_center_member_div_button1" value="登录"/>
+				<input type="button" id="top_center_member_div_button2" value="注册"/>
+				<input type="button" id="top_center_member_div_button3" value="开店"/>
+			</div>
+			<div id="top_center_report">
+				网上有害举报专区▶
+			</div>
+			<div id="top_center_tab">
+				<ul id="top_center_tab_ul">
+					<li class="top_center_tab_ul_li_choose">公告</li>
+					<li class="top_center_tab_ul_li">规则</li>
+					<li class="top_center_tab_ul_li">论坛</li>
+					<li class="top_center_tab_ul_li">安全</li>
+					<li class="top_center_tab_ul_li">公益</li>
+				</ul>
+				<div id="top_center_tab_div">
+					阿里CEO张勇:新零售目标是创造商业机会和就业 阿里万豪达成战略合作 投百亿打造“88会员节”
+				</div>
+			</div>
+			<div id="top_center_bill">
+				<ul id="top_center_bill_ul">
+					<li class="top_center_bill_ul_li">
+						<span id="top_center_bill_ul_li_span1"></span>
+						<p class="top_center_bill_ul_li_p">充话费</p>
+					</li>
+					<li class="top_center_bill_ul_li">
+						<span id="top_center_bill_ul_li_span2"></span>
+						<p class="top_center_bill_ul_li_p">游戏</p>
+					</li>
+					<li class="top_center_bill_ul_li">
+						<span id="top_center_bill_ul_li_span3"></span>
+						<p class="top_center_bill_ul_li_p">旅行</p>
+					</li>
+					<li class="top_center_bill_ul_li">
+						<span id="top_center_bill_ul_li_span4"></span>
+						<p class="top_center_bill_ul_li_p">车险</p>
+					</li>
+					<li class="top_center_bill_ul_li">
+						<span id="top_center_bill_ul_li_span5"></span>
+						<p class="top_center_bill_ul_li_p">彩票</p>
+					</li>
+					<li class="top_center_bill_ul_li">
+						<span id="top_center_bill_ul_li_span6"></span>
+						<p class="top_center_bill_ul_li_p">电影</p>
+					</li>
+					<li class="top_center_bill_ul_li">
+						<span id="top_center_bill_ul_li_span7"></span>
+						<p class="top_center_bill_ul_li_p">酒店</p>
+					</li>
+					<li class="top_center_bill_ul_li">
+						<span id="top_center_bill_ul_li_span8"></span>
+						<p class="top_center_bill_ul_li_p">理财</p>
+					</li>
+					<li class="top_center_bill_ul_li">
+						<span id="top_center_bill_ul_li_span9"></span>
+						<p class="top_center_bill_ul_li_p">找服务</p>
+					</li>
+					<li class="top_center_bill_ul_li">
+						<span id="top_center_bill_ul_li_span10"></span>
+						<p class="top_center_bill_ul_li_p">演出</p>
+					</li>
+					<li class="top_center_bill_ul_li">
+						<span id="top_center_bill_ul_li_span11"></span>
+						<p class="top_center_bill_ul_li_p">水电煤</p>
+					</li>
+					<li class="top_center_bill_ul_li">
+						<span id="top_center_bill_ul_li_span12"></span>
+						<p class="top_center_bill_ul_li_p">火车票</p>
+					</li>
+					
+				</ul>
+				<div  id="top_center_bill_ul2">
+						<ul class="top-huafei-ul">
+							<li class="top-huafei-ul-li">充话费</li>
+							<li class="top-huafei-ul-li">充流量</li>
+							<li class="top-huafei-ul-li">充固话</li>
+							<li class="top-huafei-ul-li">充宽带</li>
+						</ul>
+						<ul class="huafei-animate">
+							<li class="huafei-animate-li">
+								<span>号码:</span>
+								<input type="text" value="请输入手机号码"/>
+								<span>面值:</span>
+								<input type="text" />
+								<span>售价 $49-49.8</span>
+								<input type="button" value="立即充值" />
+							</li>
+							<li class="huafei-animate-li">1</li>
+							<li class="huafei-animate-li">2</li>
+							<li class="huafei-animate-li">3</li>
+						</ul>
+						
+				</div>
+				<!-- 	<div id="top_center_bill_ul2">2</div>
+					<div id="top_center_bill_ul2">3</div>
+					<div id="top_center_bill_ul2">4</div> -->
+
+			</div>
+			<div id="top_center_app">
+				<ul id="top_center_app_ul">
+				</ul>
+				<div class="top_center_app-div">
+					<img src="images/TB1ULEoIXXXXXbXXXXXCBLiJXXX-83-83.jpg_80x80.jpg" alt="" />
+					<p>扫一扫</p>
+				</div>
+			</div>
+		</div>
+		<div id="menu">
+			<!-- <a href="" class="menu_a" id="menu_a1"></a>
+			<a href="" class="menu_a" id="menu_a2"></a>
+			<a href="" class="menu_a" id="menu_a3"></a>
+			<a href="" class="menu_a" id="menu_a4"></a>
+			<a href="" class="menu_a" id="menu_a5"></a>
+			<a href="" class="menu_a" id="menu_a6"></a>
+			<a href="" class="menu_a" id="menu_a7"></a>
+			<a href="" class="menu_a" id="menu_a8"></a> -->
+			<!-- <a href="" class="menu_a" id="menu_a9"></a> -->
+			<div class="menu_a" >我常逛的</div>
+			<div class="menu_a" >时尚</div>
+			<div class="menu_a" >品质</div>
+			<div class="menu_a" >特色</div>
+			<div class="menu_a" >实惠</div>
+			<div class="menu_a" >猜你喜欢</div>
+			<div class="menu_a" >↑顶部</div>
+			<div class="menu_a" >反馈</div>
+			<div class="menu_a" >暴恐举报</div>
+
+
+		</div>
+	</div>
+	<div class="center-wrap">
+		<!-- 我常逛的 -->
+		<div class="center-fashion-top  left-scroll">
+			<!-- 	<div class="center-icon-tb"></div> -->
+				<span class=" center-icon-title7 "></span>
+				<a href="https://www.taobao.com/tbhome/page/special-markets#all-special-market-1"class="center-fashion-top-a">更多<i>➤</i></a>
+			</div>
+		
+		<div class="Often-visit">
+			<!-- 第一种模块 -->
+			<div class="Often-visit-content">
+				
+				<div class="Often-visit-content-left fl">
+				
+					<img src="" alt=""class="Often-visit-content-left-100-100 fl" />
+					
+					<span class="Often-visit-content-left-span">热门TOP</span>
+					<div class="Often-visit-content-left-text">	 
+						<!-- <a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a> -->
+					</div>						
+				</div>
+					<img class="Often-visit-content-left1-100-200 fl" src="images/TB1isveRXXXXXb3aXXXXXXXXXXX-200-402.jpg_100x1000q90.jpg_.webp.jpg" alt="" />
+					<img class="Often-visit-content-left2-100-200 fl" src="" alt="" />
+				<div class="Often-visit-content-left-138-202 fr">
+						<a href=""class="Often-visit-content-left-138-101-a1 ">
+							<span class="Often-visit-content-left-138-101-a-span">数码好货</span>
+							<i class="Often-visit-content-left-138-101-a-i">等你来看</i>
+							<img class="Often-visit-content-left-138-101-a-img" src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_80x80q90.jpg_.webp.jpg" alt="" />
+						</a>
+						<a href=""class="Often-visit-content-left-138-101-a2 ">
+							<span class="Often-visit-content-left-138-101-a-span">数码好货</span>
+							<i class="Often-visit-content-left-138-101-a-i">等你来看</i>
+							<img class="Often-visit-content-left-138-101-a-img" src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_80x80q90.jpg_.webp.jpg" alt="" />
+						</a>
+					</div>	
+					<img class="Often-visit-content-left-180-140-img fl" src="" alt="" />
+					<div class="Often-visit-animate1">
+					<h3><span>数码</span>&nbsp&nbsp&nbsp&nbsp品质选好货</h3>
+						为你挑选坑货
+					</div>
+					<img src="" alt=""class="Often-visit-content-left1-136-81-img fr" />
+					<img src="" alt=""class="Often-visit-content-left2-136-81-img fr" />
+			</div>
+
+			<div class="Often-visit-content">
+				
+				<div class="Often-visit-content-left fl">
+				
+					<img src="" alt=""class="Often-visit-content-left-100-100 fl" />
+					
+					<span class="Often-visit-content-left-span">热门TOP</span>
+					<div class="Often-visit-content-left-text">	 
+						<!-- <a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a> -->
+					</div>						
+				</div>
+				<img class="Often-visit-content-left1-100-200 fl" src="images/TB1isveRXXXXXb3aXXXXXXXXXXX-200-402.jpg_100x1000q90.jpg_.webp.jpg" alt="" />
+				<img class="Often-visit-content-left2-100-200 fl" src="" alt="" />
+				<div class="Often-visit-content-left-138-202 fr">
+						<a href=""class="Often-visit-content-left-138-101-a1 ">
+							<span class="Often-visit-content-left-138-101-a-span">数码好货</span>
+							<i class="Often-visit-content-left-138-101-a-i">等你来看</i>
+							<img class="Often-visit-content-left-138-101-a-img" src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_80x80q90.jpg_.webp.jpg" alt="" />
+						</a>
+						<a href=""class="Often-visit-content-left-138-101-a2 ">
+							<span class="Often-visit-content-left-138-101-a-span">数码好货</span>
+							<i class="Often-visit-content-left-138-101-a-i">等你来看</i>
+							<img class="Often-visit-content-left-138-101-a-img" src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_80x80q90.jpg_.webp.jpg" alt="" />
+						</a>
+					</div>	
+					<img class="Often-visit-content-left-180-140-img fl" src="" alt="" />
+						<div class="Often-visit-animate2">
+					<h3><span>数码</span>&nbsp&nbsp&nbsp&nbsp夏日换季好货选	</h3>
+						每天为你挑选当天上新的优选商品，更有低至五折的优惠价格。
+					</div>
+					<img src="" alt=""class="Often-visit-content-left1-136-81-img fr" />
+					<img src="" alt=""class="Often-visit-content-left2-136-81-img fr" />
+			</div>
+			<!-- 第二种模块 -->
+			<div class="Often-visit-content">
+				
+				<div class="Often-visit-content-left fl">
+				
+					<img src="" alt=""class="Often-visit-content-left-100-100 fl" />
+					
+					<span class="Often-visit-content-left-span">热门TOP</span>
+					<div class="Often-visit-content-left-text">	 
+						<!-- <a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a> -->
+					</div>						
+				</div>
+					<div class="Often-visit-content-left-100-200 fl">
+						<div class="Often-visit-content-left-100-200-100">
+							<img class="Often-visit-content-left1-100-200-img fl" src="" alt="" />
+							<a href="" class="Often-visit-content-left-100-200-100-a1">品质优秀</a>
+						</div>
+						<div class="Often-visit-content-left-100-200-100">
+							<img class="Often-visit-content-left2-100-200-img fl" src="" alt="" />
+							<a href="" class="Often-visit-content-left-100-200-100-a2">品质优秀</a>
+						</div>
+						
+					</div>	
+					<img class="Often-visit-content-left2-100-200 fl" src="" alt="" />
+				<div class="Often-visit-content-left-138-202 fr">
+							<img class="Often-visit-content-left-138-202-img3" src="" alt="" />					
+					</div>	
+					<img class="Often-visit-content-left-180-140-img fl" src="" alt="" />
+					<img src="" alt=""class="Often-visit-content-left1-136-81-img fr" />
+					<img src="" alt=""class="Often-visit-content-left2-136-81-img fr" />
+			</div>
+			<div class="Often-visit-content">
+				
+				<div class="Often-visit-content-left fl">
+				
+					<img src="" alt=""class="Often-visit-content-left-100-100 fl" />
+					
+					<span class="Often-visit-content-left-span">热门TOP</span>
+					<div class="Often-visit-content-left-text">	 
+						<!-- <a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a> -->
+					</div>						
+				</div>
+					<div class="Often-visit-content-left-100-200 fl">
+						<div class="Often-visit-content-left-100-200-100">
+							<img class="Often-visit-content-left1-100-200-img fl" src="" alt="" />
+							<a href="" class="Often-visit-content-left-100-200-100-a1">品质优秀</a>
+						</div>
+						<div class="Often-visit-content-left-100-200-100">
+							<img class="Often-visit-content-left2-100-200-img fl" src="" alt="" />
+							<a href="" class="Often-visit-content-left-100-200-100-a2">品质优秀</a>
+						</div>
+						
+					</div>	
+					<img class="Often-visit-content-left2-100-200 fl" src="" alt="" />
+				<div class="Often-visit-content-left-138-202 fr">
+							<img class="Often-visit-content-left-138-202-img3" src="" alt="" />					
+					</div>	
+					<img class="Often-visit-content-left-180-140-img fl" src="" alt="" />
+					<img src="" alt=""class="Often-visit-content-left1-136-81-img fr" />
+					<img src="" alt=""class="Often-visit-content-left2-136-81-img fr" />
+			</div>
+		<!-- 	<div class="Often-visit-content">
+				
+				<div class="Often-visit-content-left fl">
+				
+					<img src="images/TB1JaLCLVXXXXcPaXXX07tlTXXX-200-200.png_100x100q90.jpg_.webp.jpg" alt=""class="Often-visit-content-left-100-100 fl" />
+					
+					<span class="Often-visit-content-left-span">热门TOP</span>
+					<div class="Often-visit-content-left-text">	 
+						<a href="">iPhone7</a>
+						<a href="">S8</a>
+						<a href="">游戏鼠标</a>
+						<a href="">机械键盘</a>
+						<a href="">单反相机</a>
+						<a href="">AppleWatch</a>
+						<a href="">DIY主机</a>
+						<a href="">智能机器人</a>
+						<a href="">制氧机</a>
+						<a href="">榨汁机</a>
+					</div>						
+				</div>
+					<img class="Often-visit-content-left-100-200 fl" src="images/TB1isveRXXXXXb3aXXXXXXXXXXX-200-402.jpg_100x1000q90.jpg_.webp.jpg" alt="" />
+					<img class="Often-visit-content-left-100-200 fl" src="images/TB1isveRXXXXXb3aXXXXXXXXXXX-200-402.jpg_100x1000q90.jpg_.webp.jpg" alt="" />
+				<div class="Often-visit-content-left-138-202 fr">
+						<a href=""class="Often-visit-content-left-138-101-a ">
+							<span class="Often-visit-content-left-138-101-a-span">数码好货</span>
+							<i class="Often-visit-content-left-138-101-a-i">等你来看</i>
+							<img class="Often-visit-content-left-138-101-a-img" src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_80x80q90.jpg_.webp.jpg" alt="" />
+						</a>
+						<a href=""class="Often-visit-content-left-138-101-a ">
+							<span class="Often-visit-content-left-138-101-a-span">数码好货</span>
+							<i class="Often-visit-content-left-138-101-a-i">等你来看</i>
+							<img class="Often-visit-content-left-138-101-a-img" src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_80x80q90.jpg_.webp.jpg" alt="" />
+						</a>
+					</div>	
+					<img class="Often-visit-content-left-180-140-img fl" src="images/TB1Ya3aQVXXXXa3XVXXXXXXXXXX-360-280.jpg_180x180q90.jpg_.webp.jpg" alt="" />
+					<img src="images/TB1lSfgRXXXXXXLapXXXXXXXXXX-240-130.jpg_120x120q90.jpg_.webp.jpg" alt=""class="Often-visit-content-left-136-81-img fr" />
+					<img src="images/TB1iVD3RXXXXXapXXXXXXXXXXXX-240-130.jpg_120x120q90.jpg_.webp.jpg" alt=""class="Often-visit-content-left-136-81-img fr" />
+			</div>
+			<div class="Often-visit-content">
+				
+				<div class="Often-visit-content-left fl">
+				
+					<img src="images/TB1JaLCLVXXXXcPaXXX07tlTXXX-200-200.png_100x100q90.jpg_.webp.jpg" alt=""class="Often-visit-content-left-100-100 fl" />
+					
+					<span class="Often-visit-content-left-span">热门TOP</span>
+					<div class="Often-visit-content-left-text">	 
+						<a href="">iPhone7</a>
+						<a href="">S8</a>
+						<a href="">游戏鼠标</a>
+						<a href="">机械键盘</a>
+						<a href="">单反相机</a>
+						<a href="">AppleWatch</a>
+						<a href="">DIY主机</a>
+						<a href="">智能机器人</a>
+						<a href="">制氧机</a>
+						<a href="">榨汁机</a>
+					</div>						
+				</div>
+					<img class="Often-visit-content-left-100-200 fl" src="images/TB1isveRXXXXXb3aXXXXXXXXXXX-200-402.jpg_100x1000q90.jpg_.webp.jpg" alt="" />
+					<img class="Often-visit-content-left-100-200 fl" src="images/TB1isveRXXXXXb3aXXXXXXXXXXX-200-402.jpg_100x1000q90.jpg_.webp.jpg" alt="" />
+				<div class="Often-visit-content-left-138-202 fr">
+						<a href=""class="Often-visit-content-left-138-101-a ">
+							<span class="Often-visit-content-left-138-101-a-span">数码好货</span>
+							<i class="Often-visit-content-left-138-101-a-i">等你来看</i>
+							<img class="Often-visit-content-left-138-101-a-img" src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_80x80q90.jpg_.webp.jpg" alt="" />
+						</a>
+						<a href=""class="Often-visit-content-left-138-101-a ">
+							<span class="Often-visit-content-left-138-101-a-span">数码好货</span>
+							<i class="Often-visit-content-left-138-101-a-i">等你来看</i>
+							<img class="Often-visit-content-left-138-101-a-img" src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_80x80q90.jpg_.webp.jpg" alt="" />
+						</a>
+					</div>	
+					<img class="Often-visit-content-left-180-140-img fl" src="images/TB1Ya3aQVXXXXa3XVXXXXXXXXXX-360-280.jpg_180x180q90.jpg_.webp.jpg" alt="" />
+					<img src="images/TB1lSfgRXXXXXXLapXXXXXXXXXX-240-130.jpg_120x120q90.jpg_.webp.jpg" alt=""class="Often-visit-content-left-136-81-img fr" />
+					<img src="images/TB1iVD3RXXXXXapXXXXXXXXXXXX-240-130.jpg_120x120q90.jpg_.webp.jpg" alt=""class="Often-visit-content-left-136-81-img fr" />
+			</div>
+
+ -->
+		</div>
+		<div>
+		<img src="images/TB1PHMPSFXXXXckXVXXSutbFXXX.jpg" alt="" /></div>
+		<!-- 时尚爆料王 -->
+		<div class="center-fashion ">
+			<div class="center-fashion-top left-scroll">
+			<!-- 	<div class="center-icon-tb"></div> -->
+				<span class=" center-icon-title1 "></span>
+				<a href="https://www.taobao.com/tbhome/page/special-markets#all-special-market-1"class="center-fashion-top-a">更多<i>➤</i></a>
+			</div>
+		<!-- 	<div class="center-fashion-content1 fl">
+				<div class="center-fashion-content1-top fl">
+					<a href=""><img src="" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp"class="center-a-all-img" >
+						<i class="fl center-a-all-i">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-fashion-content1-left fl">
+					<img src="images/TB1iODTSXXXXXc2aXXXXXXXXXXX-180-400.jpg_200x200.jpg" alt=""class="center-img-100-217" />
+					<span>沙滩度假连衣裙</span>
+				</div>
+				<div class="center-fashion-content1-right fr">
+			
+					<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""class="center-img-100-100" />
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-fashion-content1-right fr">
+					<img src="images/TB15OZHNFXXXXXDXpXXXXXXXXXX-180-180.png_120x120.jpg" alt="" class="center-img-100-100"/>
+					<span class="center-img-100-100-span">女神战靴</span>
+				</div>
+			</div>
+
+			<div class="center-fashion-content1 fl">
+				<div class="center-fashion-content1-top fl">
+					<a href=""><img src="" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp"class="center-a-all-img" >
+						<i class="fl center-a-all-i">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-fashion-content1-right fr"></div>
+				<div class="center-fashion-content1-right fr"></div>
+				<div class="center-fashion-content1-right fr"></div>
+				<div class="center-fashion-content1-right fr"></div>
+			</div>
+
+			<div class="center-fashion-content1 fl">
+				<div class="center-fashion-content1-top fl">
+					<a href=""><img src="" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp"class="center-a-all-img" >
+						<i class="fl center-a-all-i">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-fashion-content1-left fl"></div>
+				<div class="center-fashion-content1-right fr"></div>
+				<div class="center-fashion-content1-right fr"></div>
+			</div>
+
+			<div class="center-fashion-content1 fl">
+				<div class="center-fashion-content1-top fl">
+					<a href=""><img src="" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp"class="center-a-all-img" >
+						<i class="fl center-a-all-i">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-fashion-content1-right fr"></div>
+				<div class="center-fashion-content1-right fr"></div>
+				<div class="center-fashion-content1-right fr"></div>
+				<div class="center-fashion-content1-right fr"></div>
+			</div> -->
+			
+		</div>
+		<!-- 有好货 -->
+		<div class="empty">
+			<div class="center-r-top center-icon-title6">
+			</div>
+			<ul class="center-goods-ul">
+			</ul>
+			<div class="goods-refresh">
+				<i class="center-tb-icon"></i>
+				<span>换一组看看</span>
+			</div>
+		</div>
+
+			<!-- 今日推荐右边的板块 -->
+		<div class="center-right-box fr">
+			<div class="center-r-top center-icon-title5">
+			</div>
+			<ul class="center-right-box-ul">
+			</ul>
+			<a class="center-quality-content1-2-a" href="//www.taobao.com/markets/tbhome/cool-shop" data-spm-click="gostr=/tbindex;locaid=d1992;name=每日好店">
+				<!-- <i class="tb-icon"></i> -->
+  			<i class="center-tb-icon"></i>
+  			<span class="center-loking-more">查看更多好店</span>
+			</a>
+			<div class="center-r-content-hot-sale">
+				<h4 class="center-r-content-hot-sale-h4">今日热卖</h4>
+				<img src="images/TB1dWzESpXXXXb_XVXXSutbFXXX.jpg" alt="" class="center-r-content-hot-sale-img"/>
+			</div>
+		</div>
+
+
+			<!-- 品质生活家 -->
+		<div class="center-quality-life ">
+			<div class="center-fashion-top left-scroll">
+				<span class="center-icon-title2"></span>
+				<a href="https://www.taobao.com/tbhome/page/special-markets#all-special-market-1"class="center-fashion-top-a">更多<i>➤</i></a>
+			</div>
+
+			<div class="center-quality-content1 fl"  data-dataid="222746">
+				<div class="center-fashion-content1-top fl">
+					<a href=""><img src="i" alt="" class="center-content1-top-img" /></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<!-- <div class="center-quality-content1-top fl"></div> -->
+				<div class="center-quality-content1-2 fl">
+					<a href="" class="center-quality-content1-2-a"><img src="images/TB1sLTNNXXXXXcDXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt="" class="center-quality-content1-2-img"/>
+					<span class="center-quality-content1-2-span">正宗牛肉丸</span>
+					<i class="center-quality-content1-2-i">Q弹有嚼劲</i>
+					</a>
+				</div>
+				<div class="center-quality-content1-2 fr">
+						<a href=""  class="center-quality-content1-2-a2"><img src="images/TB1_VDSNXXXXXX5XXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt="" class="center-quality-content1-2-img" />
+					<span  class="center-quality-content1-2-span">鲜甜石榴</span>
+					<i class="center-quality-content1-2-i">皮薄汁水甜</i>
+					</a>
+				</div>
+				
+				<div class="center-quality-content1-3 fl">
+					<a class="center-8a-text"href="">应季鲜果</a>
+					<a class="center-8a-text"href="">精致糕点</a>
+					<a class="center-8a-text"href="">全球美食</a>
+					<a class="center-8a-text"href="">烘培原料</a>
+					<a class="center-8a-text"href="">无辣不欢</a>
+					<a class="center-8a-text"href="">生猛海鲜</a>		
+				</div>
+			</div>
+			<div class="center-quality-content1 fl" data-dataid="222752">
+				<div class="center-fashion-content1-top fl">
+				<a href=""><img src="images/TB14YAJJFXXXXavXpXXXXXXXXXX-220-48.png_220x220.jpg" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+			</div>
+			<div class="center-quality-content1 fl" data-dataid="222747">
+				<div class="center-fashion-content1-top fl">
+						<a href=""><img src="images/TB1b4guLVXXXXbjaXXXXXXXXXXX-220-48.png_220x220.jpg" alt="" class="center-content1-top-img"/></a>
+				</div>
+				<div class="center-quality-content1-2 fl">
+					<a href=""><img src="images/TB1sLTNNXXXXXcDXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt="" class="center-quality-content1-2-img"/>
+					<span class="center-quality-content1-2-span">正宗牛肉丸</span>
+					<i class="center-quality-content1-2-i">Q弹有嚼劲</i>
+					</a>
+				</div>
+				<div class="center-quality-content1-2 fr">
+					<a href=""><img src="images/TB1sLTNNXXXXXcDXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt="" class="center-quality-content1-2-img"/>
+					<span class="center-quality-content1-2-span">正宗牛肉丸</span>
+					<i class="center-quality-content1-2-i">Q弹有嚼劲</i>
+					</a>
+				</div>
+				<div class="center-quality-content1-3 fl">
+					<a class="center-8a-text"href="">应季鲜果</a>
+					<a class="center-8a-text"href="">精致糕点</a>
+					<a class="center-8a-text"href="">全球美食</a>
+					<a class="center-8a-text"href="">烘培原料</a>
+					<a class="center-8a-text"href="">无辣不欢</a>
+					<a class="center-8a-text"href="">生猛海鲜</a>	
+				</div>
+			</div>
+			<div class="center-quality-content1 fl" data-dataid="222749">
+				<div class="center-fashion-content1-top fl">
+				<a href=""><img src="images/TB14YAJJFXXXXavXpXXXXXXXXXX-220-48.png_220x220.jpg" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+			</div>
+
+			<div class="center-quality-content1 fl" data-dataid="222750">
+				<div class="center-fashion-content1-top fl">
+				<a href=""><img src="images/TB14YAJJFXXXXavXpXXXXXXXXXX-220-48.png_220x220.jpg" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+			</div>
+			<div class="center-quality-content1 fl" data-dataid="222745">
+				<div class="center-fashion-content1-top fl">
+					<a href=""><img src="images/TB17e2TLVXXXXcKXpXXXXXXXXXX-220-48.png_220x220.jpg" alt=""class="center-content1-top-img" /></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<!-- <div class="center-quality-content1-top fl"></div> -->
+				<div class="center-quality-content1-2 fl">
+					<a href="" class="center-quality-content1-2-a"><img src="images/TB1sLTNNXXXXXcDXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt="" class="center-quality-content1-2-img"/>
+					<span class="center-quality-content1-2-span">正宗牛肉丸</span>
+					<i class="center-quality-content1-2-i">Q弹有嚼劲</i>
+					</a>
+				</div>
+				<div class="center-quality-content1-2 fr">
+						<a href=""  class="center-quality-content1-2-a2"><img src="images/TB1_VDSNXXXXXX5XXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt="" class="center-quality-content1-2-img" />
+					<span  class="center-quality-content1-2-span">鲜甜石榴</span>
+					<i class="center-quality-content1-2-i">皮薄汁水甜</i>
+					</a>
+				</div>
+				
+				<div class="center-quality-content1-3 fl">
+					<a class="center-8a-text"href="">应季鲜果</a>
+					<a class="center-8a-text"href="">精致糕点</a>
+					<a class="center-8a-text"href="">全球美食</a>
+					<a class="center-8a-text"href="">烘培原料</a>
+					<a class="center-8a-text"href="">无辣不欢</a>
+					<a class="center-8a-text"href="">生猛海鲜</a>		
+				</div>
+			</div>
+			<div class="center-quality-content1 fl" data-dataid="222748">
+				<div class="center-fashion-content1-top fl">
+					<a href=""><img src="images/TB17e2TLVXXXXcKXpXXXXXXXXXX-220-48.png_220x220.jpg" alt=""class="center-content1-top-img" /></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<!-- <div class="center-quality-content1-top fl"></div> -->
+				<div class="center-quality-content1-2 fl">
+					<a href="" class="center-quality-content1-2-a"><img src="images/TB1sLTNNXXXXXcDXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt="" class="center-quality-content1-2-img"/>
+					<span class="center-quality-content1-2-span">正宗牛肉丸</span>
+					<i class="center-quality-content1-2-i">Q弹有嚼劲</i>
+					</a>
+				</div>
+				<div class="center-quality-content1-2 fr">
+						<a href=""  class="center-quality-content1-2-a2"><img src="images/TB1_VDSNXXXXXX5XXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt="" class="center-quality-content1-2-img" />
+					<span  class="center-quality-content1-2-span">鲜甜石榴</span>
+					<i class="center-quality-content1-2-i">皮薄汁水甜</i>
+					</a>
+				</div>
+				
+				<div class="center-quality-content1-3 fl">
+					<a class="center-8a-text"href="">应季鲜果</a>
+					<a class="center-8a-text"href="">精致糕点</a>
+					<a class="center-8a-text"href="">全球美食</a>
+					<a class="center-8a-text"href="">烘培原料</a>
+					<a class="center-8a-text"href="">无辣不欢</a>
+					<a class="center-8a-text"href="">生猛海鲜</a>		
+				</div>
+			</div>
+			<div class="center-quality-content1 fl" data-dataid="222751">
+				<div class="center-fashion-content1-top fl">
+				<a href=""><img src="images/TB14YAJJFXXXXavXpXXXXXXXXXX-220-48.png_220x220.jpg" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1NZwJNFXXXXbPXXXXXXXXXXXX-180-180.png_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">包治百病</span>
+				</div>
+			</div>
+
+		
+		</div>
+		<!-- 特色玩味控 -->
+		<div class="center-feature-play ">
+			<div class="center-fashion-top left-scroll">
+				<span class="center-icon-title3"></span>
+				<a href="https://www.taobao.com/tbhome/page/special-markets#all-special-market-1" class="center-fashion-top-a">更多<i>➤</i></a>
+			</div>
+			
+			
+		<!-- 	<div class="center-feature-content1 fl" data-aid="222859">
+				<div class="center-quality-content1-top fl">
+					<a href=""><img src="" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1abEHQVXXXXXmXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">智潮新机</span>
+				</div>
+				
+				<div class="center-quality-content1-4 fl">
+					<img src="images/TB1Yq65QVXXXXaRaXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">鼠标外设</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+					<img src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">科技数码</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1TUv0QVXXXXb9aXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">火炬家电</span>
+				</div>
+			</div>
+			<div class="center-feature-content1 fl" data-aid="222858">
+				<div class="center-quality-content1-top fl">
+					<a href=""><img src="" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1abEHQVXXXXXmXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">智潮新机</span>
+				</div>
+				
+				<div class="center-quality-content1-4 fl">
+					<img src="images/TB1Yq65QVXXXXaRaXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">鼠标外设</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+					<img src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">科技数码</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1TUv0QVXXXXb9aXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">火炬家电</span>
+				</div>
+			</div>
+			<div class="center-feature-content1 fl" data-aid="222855">
+				<div class="center-quality-content1-top fl">
+					<a href=""><img src="" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1abEHQVXXXXXmXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">智潮新机</span>
+				</div>
+				
+				<div class="center-quality-content1-4 fl">
+					<img src="images/TB1Yq65QVXXXXaRaXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">鼠标外设</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+					<img src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">科技数码</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1TUv0QVXXXXb9aXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">火炬家电</span>
+				</div>
+			</div>
+			<div class="center-feature-content1 fl" data-aid="222851">
+				<div class="center-fashion-content1-top fl">
+					<a href=""><img src="" alt=""class="center-content1-top-img" /></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-quality-content1-2 fl">
+					<a href="" class="center-quality-content1-2-a"><img src="images/TB1sLTNNXXXXXcDXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt="" class="center-quality-content1-2-img"/>
+					<span class="center-quality-content1-2-span">正宗牛肉丸</span>
+					<i class="center-quality-content1-2-i">Q弹有嚼劲</i>
+					</a>
+				</div>
+				<div class="center-quality-content1-2 fr">
+						<a href=""  class="center-quality-content1-2-a"><img src="images/TB1_VDSNXXXXXX5XXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt="" class="center-quality-content1-2-img" />
+					<span  class="center-quality-content1-2-span">鲜甜石榴</span>
+					<i class="center-quality-content1-2-i">皮薄汁水甜</i>
+					</a>
+				</div>
+				
+				<div class="center-quality-content1-3 fl">
+					<a class="center-8a-text"href="">应季鲜果</a>
+					<a class="center-8a-text"href="">精致糕点</a>
+					<a class="center-8a-text"href="">全球美食</a>
+					<a class="center-8a-text"href="">烘培原料</a>
+					<a class="center-8a-text"href="">无辣不欢</a>
+					<a class="center-8a-text"href="">生猛海鲜</a>		
+				</div>
+			</div> 
+			<div class="center-feature-content1 fl" data-aid="222854">
+				<div class="center-quality-content1-top fl">
+					<a href=""><img src="" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1abEHQVXXXXXmXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">智潮新机</span>
+				</div>
+				
+				<div class="center-quality-content1-4 fl">
+					<img src="images/TB1Yq65QVXXXXaRaXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">鼠标外设</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+					<img src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">科技数码</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1TUv0QVXXXXb9aXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">火炬家电</span>
+				</div>
+			</div>
+			<div class="center-feature-content1 fl" data-aid="222857">
+				<div class="center-quality-content1-top fl">
+					<a href=""><img src="" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1abEHQVXXXXXmXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">智潮新机</span>
+				</div>
+				
+				<div class="center-quality-content1-4 fl">
+					<img src="images/TB1Yq65QVXXXXaRaXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">鼠标外设</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+					<img src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">科技数码</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1TUv0QVXXXXb9aXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">火炬家电</span>
+				</div>
+			</div>
+			<div class="center-feature-content1 fl" data-aid="222856">
+				<div class="center-quality-content1-top fl">
+					<a href=""><img src="" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1abEHQVXXXXXmXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">智潮新机</span>
+				</div>
+				
+				<div class="center-quality-content1-4 fl">
+					<img src="images/TB1Yq65QVXXXXaRaXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">鼠标外设</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+					<img src="images/TB1kubWQVXXXXXlapXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">科技数码</span>
+				</div>
+				<div class="center-quality-content1-4 fl">
+						<img src="images/TB1TUv0QVXXXXb9aXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt=""  class="center-img-100-100"/>
+					<span class="center-img-100-100-span">火炬家电</span>
+				</div>
+			</div>
+			<div class="center-feature-content1 fl" data-aid="222853">
+				<div class="center-fashion-content1-top fl">
+					<a href=""><img src="images/TB17e2TLVXXXXcKXpXXXXXXXXXX-220-48.png_220x220.jpg" alt=""class="center-content1-top-img" /></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+				</div>
+				<div class="center-quality-content1-2 fl">
+					<a href="" class="center-quality-content1-2-a"><img src="images/TB1sLTNNXXXXXcDXXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt="" class="center-quality-content1-2-img"/>
+					<span class="center-quality-content1-2-span">正宗牛肉丸</span>
+					<i class="center-quality-content1-2-i">Q弹有嚼劲</i>
+					</a>
+				</div>
+				<div class="center-quality-content1-2 fr">
+						<a href=""  class="center-quality-content1-2-a"><img src="images/TB1_VDSNXXXXXX5XXXXXXXXXXXX-200-200.jpg_120x120.jpg" alt="" class="center-quality-content1-2-img" />
+					<span  class="center-quality-content1-2-span">鲜甜石榴</span>
+					<i class="center-quality-content1-2-i">皮薄汁水甜</i>
+					</a>
+				</div>
+				
+				<div class="center-quality-content1-3 fl">
+					<a class="center-8a-text"href="">应季鲜果</a>
+					<a class="center-8a-text"href="">精致糕点</a>
+					<a class="center-8a-text"href="">全球美食</a>
+					<a class="center-8a-text"href="">烘培原料</a>
+					<a class="center-8a-text"href="">无辣不欢</a>
+					<a class="center-8a-text"href="">生猛海鲜</a>		
+				</div>
+			</div>  -->
+			
+		</div>
+		<!-- 实惠专业户 -->
+		<div class="center-cheap-people ">
+				<div class="center-fashion-top left-scroll">
+				<span class="center-icon-title4"></span>
+				<a href="https://www.taobao.com/tbhome/page/special-markets#all-special-market-1" class="center-fashion-top-a">更多<i>➤</i></a>
+			</div>
+			<!-- 278*137的盒子 -->
+		<!-- 	<div class="center-cheap-block fl">
+				<h3>
+					<a href=""><img src="images/TB1EcL_LVXXXXatXVXXXXXXXXXX-126-36.png_110x110.jpg" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+					<div class="center-qging fr">抢购进行中</div>
+				</h3>
+				<div class="center-cheap-content">
+					<div class="center-cheap-content-text">
+						<h4 class="center-cheap-content-text-h4">Aji苏打饼干1.25kg起购</h4>
+
+						<span class="center-cheap-content-text-span-price">24.9</span>
+						<i class="center-cheap-content-text-i">已抢购332件</i>
+						<img src="images/TB2beRyadifF1Jjy0FdXXX3dpXa_!!0-juitemmedia.jpg_120x120.jpg" alt=" " class="center-cheap-content-90-90" />
+					</div>
+				</div>
+			</div> -->
+		<!-- 	<div class="center-cheap-block2 fl">
+					<a href=""><img src="images/TB1zGAfOFXXXXb6XVXXXXXXXXXX-158-36.png_110x110.jpg" alt="" class="center-content1-top-img"/></a>
+					<i class="center-tb-icon"></i>
+					<span class="center-a-all">
+						<img src="images/TB15gJ2LXXXXXXpXpXXXXXXXXXX-101-101.png_.webp" >
+						<i class="fl">手机淘宝扫码</i>
+					</span>
+					<span class="center-cheap-content-text-span">优质好货</span>
+					<em class="center-cheap-content-text-em">特价专区</em>
+					<a class="center-cheap-content-text-a" href="">全场包邮</a>
+						<img src="images/TB1yNt.SFXXXXXmapXXXXXXXXXX_!!0-tejia.jpg_120x120.jpg" alt=" " class="center-cheap-content-90-90" />
+					</div> -->
+			</div>
+		<!-- <div class="qiang"></div> -->
+		<!-- 浓郁或者清新的图片 -->
+		<div class="center-img-qingxin"><img src="images/TB1CnofSFXXXXc3XpXXXXXXXXXX-880-70.jpg" alt="" /></div>
+
+		
+	</div>
+	<div class="bottom-clear"></div>
+	<div id="bottom">
+		<div id="bottom_remai">
+			<h4 class="bottom-header">
+				<img src="images/bottom-remai.png" alt="" />热卖单品
+			</h4>
+			<div id="bottom_tab">
+				<a href="">大码男</a>
+				<a href="">男秋装</a>
+				<a href="">西裤男</a>
+			</div>
+			<div class="bottom-box-3ul"></div>
+			<!-- 4个ul --><!-- 
+			<ul class="bottom-bigbox">
+				<li class="bottom-left">
+					<img src="" alt="" />
+					<div class="bottom-leftpri">
+						<a href="">¥ 75.00</a>
+					</div>
+					<div class="bottom-leftpostage">
+						<a href="">包邮</a>
+					</div>
+					<a href="">月销6055笔</a>
+					<p>有生之年能碰到老板这个店,够幸福的...</p>
+					<span>评价 5015</span>
+					<span>收藏 4646</span>
+					<div class="hot-sale-cover-200"></div>
+				</li>
+				<li class="bottom-rtop">
+					<img src="" alt="" />
+					<div class="bottom-rpri">
+						<a href="">¥ 75.00</a>
+					</div>
+					<a href="">月销6055笔</a>
+					<div class="hot-sale-cover-140"></div>
+				</li>
+				<li class="bottom-rtop">
+					<img src="" alt="" />
+					<div class="bottom-rpri">
+						<a href="">¥ 75.00</a>
+					</div>
+					<a href="">月销6055笔</a>
+				</li>
+				<li class="bottom-bot">
+					<img src="" alt="" />
+				</li>
+
+			</ul>
+		
+			<ul class="bottom-bigbox"></ul>
+			<ul class="bottom-bigbox"></ul>
+ -->
+
+		</div>
+
+
+		<div id="bottom_zhibo">
+			<h4 class="bottom-header">
+				<span class="global-icon"></span>淘宝直播
+			</h4>
+			<ul class="bottom_zhiboleft">
+				<!-- <a href="">
+					<li>
+						<img src="images/1.jpg" alt="" class="bottom-bigimgcode" />
+						<span>慕狄旗舰店</span>
+					</li>
+					<li><img src="" alt="" class="bottom-bigimg"/></li>
+				</a>
+				<li class="bottom-live">
+					<span class="bottom-icon">直播</span>
+					<span class="bottom-view">1234观看</span>
+				</li>  -->
+			</ul>
+
+			<!-- 直播右侧  需要8个bottom-zhiboright盒子-->
+			<div class="bottom-right-8video">
+		<!-- 			<ul class="bottom-zhiboright">
+				<a href="">
+					<li>
+						<img src="images/1.jpg" alt="" class="bottom-smallimgcode" />
+						<span>小妖</span>
+					</li>
+
+					<li><img src="" alt="" class="bottom-smallimg" /></li>
+				</a>
+			
+				<li class="bottom-live">
+					<span class="bottom-icon">直播</span>
+					<span class="bottom-view">1234观看</span>
+				</li>
+			</ul> -->
+			</div>
+		
+		</div>
+
+
+		<div id="bottom_bimai">
+			<h4 class="bottom-header">
+				<span class="global-icon"></span>必买清单
+			</h4>
+			<!-- 需要4个div -->
+			<!-- <div class="bottom-bimaibox"> -->
+			<!-- 	<h3>搞怪杯子，Po图界的奇葩选手</h3>
+				<p>在这个喝水都要po图的年代，你的水杯够吸引人吗？是不是没有足够的自信来回来回来回来回来回来回....</p> 
+				-+				<!-- <ul class="bottom-bimaibigbox"> -->
+				<!-- 	<li><img src="images/1.jpg" alt="" /></li>
+					<li><img src="images/1.jpg" alt="" /></li>
+					<li><img src="images/1.jpg" alt="" /></li> -->
+				<!-- </ul> -->
+				<!-- <p>女神小助手 分享7个宝贝</p> -->
+			<!-- </div> -->
+		</div>
+
+
+		<div id="bottom_caini"class="left-scroll">
+			<h4 class="bottom-header">
+			<span class="global-icon"></span>猜你喜欢
+			</h4>
+			<div class="bottom_caini-div">实时推荐最适合你的宝贝</div>
+			<ul class="bottom-cainibox">
+				<!-- 重复布局n个li -->
+			<!-- 	<li class="bottom-cainismallbox">
+					<img src="images/1.jpg" alt="" />
+					<p>热阿迪达斯adidas2016新款男装卫衣外套名鞋库AJ3592</p>
+					<span>¥229</span>
+					<div class="bottom-cainismallbox-found">找相似</div>
+				</li> -->
+			</ul>
+		</div>
+
+
+		<h4 class="bottom-header">END</h4>
+
+
+		<div id="bottom_stern">
+			<div class="bottom-word">
+				<span class="bottom-sternicon">
+					<span class="global-icon"></span>消费者保障
+				</span>
+				<ul class="bottom-sternconnect">
+					<li><a href="">保障范围</a></li>
+					<li><a href="">退货退款流程</a></li>
+					<li><a href="">服务中心</a></li>
+					<li><a href=""> 更多特色服务</a></li>
+				</ul>
+			</div>
+			<div class="bottom-word">
+				<span class="bottom-sternicon">
+					<span class="global-icon"></span>新手上路
+				</span>
+
+				<ul class="bottom-sternconnect">
+					<li><a href="">新手专区</a></li>
+					<li><a href="">消费警示</a></li>
+					<li><a href="">交易安全</a></li>
+					<li><a href=""> 24小时在线帮助</a></li>
+					<li><a href=""> 免费开店</a></li>
+				</ul>
+			</div>
+			<div class="bottom-word">
+				<span class="bottom-sternicon">
+					<span class="global-icon"></span>付款方式
+				</span>
+				<ul class="bottom-sternconnect">
+					<li><a href="">快捷支付</a></li>
+					<li><a href="">信用卡</a></li>
+					<li><a href="">余额宝</a></li>
+					<li><a href=""> 蚂蚁花呗</a></li>
+					<li><a href=""> 货到付款</a></li>
+				</ul>    
+			</div>
+			<div class="bottom-word">
+				<span class="bottom-sternicon">
+					<span class="global-icon"></span>淘宝特色
+				</span>
+				<ul class="bottom-sternconnect">
+					<li><a href="">手机淘宝</a></li>
+					<li><a href="">旺旺/旺信</a></li>
+					<li><a href="">大众评审</a></li>
+				</ul>  
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div id="bottom_base">
+		<hr />
+		<ul class="bottom-basetop">
+			<li><a href="">阿里巴巴集团</a></li>
+			<li><a href="">淘宝网</a></li>
+			<li><a href="">天猫</a></li>
+			<li><a href="">聚划算</a></li>
+			<li><a href="">全球速卖通</a></li>
+			<li><a href="">阿里巴巴国际交易市场</a></li>
+			<li><a href="">阿里球星</a></li>
+			<li><a href="">支付宝</a></li>
+			<li><a href="">阿里健康</a></li>
+			<li><a href="">阿里影业</a></li>
+			<li><a href="">钉钉</a></li>
+			<!-- <li><a href="">阿里巴巴集团</a></li>
+			<li><a href="">淘宝网</a></li>
+			<li><a href="">天猫</a></li>
+			<li><a href="">聚划算</a></li>
+			<li><a href="">全球速卖通</a></li>
+			<li><a href="">阿里巴巴国际交易市场</a></li>
+			<li><a href="">阿里球星</a></li>
+			<li><a href="">支付宝</a></li>
+			<li><a href="">阿里健康</a></li>
+			<li><a href="">阿里影业</a></li>
+			<li><a href="">钉钉</a></li> -->
+		</ul>
+		<hr />
+		<ul class="bottom-basebot">
+			<li><a href="">关于淘宝</a></li>
+			<li><a href="">合作伙伴</a></li>
+			<li><a href="">营销中心</a></li>
+			<li><a href="">廉政举报</a></li>
+			<li><a href="">联系客服</a></li>
+			<li><a href="">开放平台</a></li>
+			<li><a href="">诚招英才</a></li>
+			<li><a href="">联系我们</a></li>
+			<li><a href="">网站地图</a></li>
+			<li><a href="">法律声明及隐私权政策</a></li>
+			<li><a href="">知识产权</a></li>
+			<li><b>|</b></li>
+			<li><span>© 2003-2017 Taobao.com 版权所有</span></li>
+			<li><a href="">网络文化经营许可证：浙网文[2013]0268-027号</a></li>
+			<li><b>|</b></li>
+			<li><a href="">增值电信业务经营许可证：浙B2-20080224</a></li>
+			<li><b>|</b></li>
+			<li><span>信息网络传播视听节目许可证：1109364号</span></li>
+			<li><b>|</b></li>
+			<li><span>互联网违法和不良信息举报电话：0571-81683755 blxxjb@alibaba-inc.com</span></li>
+			<li><span>浙公网安备 33010002000078号</span></li>
+		</ul>
+		<img src="images/bottom-picture.jpg" alt="" />
+	</div>
+	<div id="hide-title">
+		<span id="hide-title_span">
+			<input type="text" id="hide-title_input" value="oppoa77手机壳女"/>
+		</span>
+		<a href=""><input type="text" id="hide-title_button" value="搜索"/></a>
+	</div>
+</body>
+</html>
